@@ -1,0 +1,42 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+ class cube
+ {
+     int side;
+     float fencecost,vol,cost_of_fence;
+ public:
+    cube()
+    {
+        cout<<"Enter the input for size"<<endl;
+        cin>>side;
+        cout<<"enter the cost for fence per meter square"<<endl;
+        cin>>fencecost;
+
+    }
+  inline void volume();
+  inline void cost();
+  inline void display();
+ };
+
+inline  void cube::volume()
+ {
+     vol= side*side*side;
+ }
+ inline void cube::cost()
+ {
+     cost_of_fence=fencecost*(6* side* side);
+ }
+ inline void cube::display()
+ {
+    cout<<"Volume of cube is "<<vol<<endl;
+    cout<<"Total cost of fence Rs."<<cost_of_fence<<endl;
+ }
+ int main()
+ {
+     cube c;
+     c.volume();
+     c.cost();
+     c.display();
+
+ }
